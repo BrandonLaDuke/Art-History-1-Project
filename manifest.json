@@ -1,0 +1,7 @@
+{
+  "name": "Art History One Project",
+  "short_name": "Art History One Project",
+  "description": "The final project web-app for my Art History One  class.",
+  "start_url": "/",
+  "display": "standalone"
+}
