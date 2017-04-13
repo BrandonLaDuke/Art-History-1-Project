@@ -1,0 +1,96 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="art-navbar">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --main-color: #45aead;
+        --nav-text-color: #ffffff;
+        --nav-link-hover: #674534;
+      }
+      .navbar {
+        display: flex;
+        background-color: var(--main-color);
+      }
+      .navbar > div {
+        flex: 1;
+        color: var(--nav-text-color);
+      }
+      .navbar > .logo {
+        text-align: center;
+      }
+      .navbar .left, .navbar .right {
+        vertical-align: middle;
+        margin: auto;
+        text-align: center;
+      }
+      .navbar .item {
+        padding: 20px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+      /* Set navbar hover state */
+      .navbar .item:hover {
+        background-color: var(--nav-link-hover)
+      }
+      /* Set navbar links to nav text color */
+      .navbar a {
+        color: var(--nav-text-color);
+      }
+      @media screen and (max-width:800px) {
+        .left, .right {
+          display: none;
+        }
+        .navbar > .logo {
+          text-align: left;
+        }
+        paper-icon-button {
+          vertical-align: middle;
+          margin: auto 20px;
+        }
+      }
+      @media screen and (min-width:801px) {
+        /* Make drawer disappear */
+        drawer, paper-icon-button {
+          display: none;
+        }
+      }
+    </style>
+    <div class="navbar">
+        <paper-icon-button icon="menu"></paper-icon-button>
+      <div class="left">
+        <a class="item" href="#">About</a>
+        <a class="item" href="#">Something</a>
+        <a class="item" href="#">Something</a>
+      </div>
+      <div class="logo">
+        <h1>Art History Project</h1>
+      </div>
+      <div class="right">
+        <a class="item" href="#">About</a>
+        <a class="item" href="#">Something</a>
+        <a class="item" href="#">Something</a>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class MyApplication extends Polymer.Element {
+      static get is() { return 'art-navbar'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'art-navbar'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyApplication.is, MyApplication);
+  </script>
+</dom-module>
