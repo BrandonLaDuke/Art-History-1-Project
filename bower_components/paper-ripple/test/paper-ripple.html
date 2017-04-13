@@ -208,7 +208,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             done();
           });
           Polymer.dom(rippleContainer).appendChild(ripple);
-          window.ShadyDOM && window.ShadyDOM.flush();
           ripple.downAction();
           ripple.upAction();
         });
@@ -216,14 +215,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var ripple = document.createElement('paper-ripple');
           Polymer.dom(rippleContainer).appendChild(ripple);
           Polymer.dom(rippleContainer).removeChild(ripple);
-
+          
           ripple.addEventListener('transitionend', function() {
             expect(ripple.parentNode).to.be.ok;
             Polymer.dom(document.body).removeChild(ripple);
             done();
           });
           Polymer.dom(document.body).appendChild(ripple);
-          window.ShadyDOM && window.ShadyDOM.flush();
           ripple.downAction();
           ripple.upAction();
         });
@@ -243,7 +241,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             setTimeout(function() { done(); });
           });
           Polymer.dom(rippleContainer).appendChild(ripple);
-          window.ShadyDOM && window.ShadyDOM.flush();
           ripple.downAction();
           ripple.upAction();
         });

@@ -1,4 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 
 <dom-module id="art-navbar">
   <template>
@@ -43,12 +45,23 @@
         .left, .right {
           display: none;
         }
+        .navbar > .logo {
+          text-align: left;
+        }
+        paper-icon-button {
+          vertical-align: middle;
+          margin: auto 20px;
+        }
       }
       @media screen and (min-width:801px) {
-        /* Make drawer appear */
+        /* Make drawer disappear */
+        drawer, paper-icon-button {
+          display: none;
+        }
       }
     </style>
     <div class="navbar">
+        <paper-icon-button icon="menu"></paper-icon-button>
       <div class="left">
         <a class="item" href="#">About</a>
         <a class="item" href="#">Something</a>
