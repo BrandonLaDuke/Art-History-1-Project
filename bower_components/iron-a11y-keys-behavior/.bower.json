@@ -45,11 +45,11 @@
   },
   "ignore": [],
   "homepage": "https://github.com/PolymerElements/iron-a11y-keys-behavior",
-  "_release": "c8aeab392a",
+  "_release": "90c3c3370c",
   "_resolution": {
     "type": "branch",
     "branch": "2.0-preview",
-    "commit": "c8aeab392add87550d2ce67be501dfc598fd3303"
+    "commit": "90c3c3370c5815a757fb33e8f46b27ef48c4fca6"
   },
   "_source": "https://github.com/PolymerElements/iron-a11y-keys-behavior.git",
   "_target": "2.0-preview",
