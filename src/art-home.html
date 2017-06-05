@@ -19,14 +19,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
+      .header {
+        background-image: url(../images/hhy_home.jpg);
+        background-size: cover;
+        background-position: center;
+        height: calc(100vh - 64px);
+      }
+      .header a {
+        padding: 1em 5em;
+        position: fixed;
+        top: 600px;
+        left: 430px;
+        background-color: #20bfdc;
+        color: #ffffff;
+        text-decoration: none;
+        border: 0px;
+        transition: ease all 500ms;
+      }
+
+      .header a:hover {
+        border: 2px solid black;
+      }
     </style>
 
-    <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-    </div>
+  <div class="header">
+    <a href="about">Learn More</a>
+  </div>
   </template>
 
   <script>
