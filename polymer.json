@@ -4,6 +4,7 @@
   "fragments": [
     "src/art-home.html",
     "src/art-about.html",
+    "src/art-story.html",
     "src/art-view404.html"
   ],
   "sources": [

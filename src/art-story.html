@@ -1,0 +1,65 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="art-story">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      .header {
+        background-image: url(../images/story_head.JPG);
+        background-size: cover;
+        background-position: 100% 20%;
+        height: 20em;
+      }
+      .about {
+        margin: 1em auto;
+        max-width: 800px;
+        padding: 10px;
+      }
+      .about h1 {
+        text-align: center;
+        font-weight: 900;
+        font-size: 2em;
+      }
+      .about h3 {
+        font-weight: 100;
+        text-align: center;
+      }
+      .attr {
+        text-align: right;
+      }
+    </style>
+
+    <div class="header">
+
+    </div>
+    <div class="about">
+      <h1>Project Story</h1>
+      <h3>Art History 1 &nbsp; | &nbsp; 7 June, 2017</h3>
+      <p>I created the final project on Hans Holbein the Younger because during the class one day we looked at the picture that I have included on the home page that has a perspective effect. If you look at the picture from the far right side you will see a skull in the photo. But, that's not it. I also decided on him because of his name was diffrent. Instead of being called Hans Holbein II to denote he was the second. He got the name the Younger.</p>
+      <p>I made this web app with Polymer! My favorite web technology! I used the "app-route" element along with the PRPL pattern to ensure that the app loads with very fast speeds on all device types. Authough due to not enough time the home page is not responsive like the rest of the site.</p>
+      <p>I hope you like it!</p>
+      <p class="attr">-<a href="http://brandonladuke.com">Brandon LaDuke</a></p>
+    </div>
+  </template>
+
+  <script>
+    class ArtStory extends Polymer.Element {
+      static get is() { return 'art-story'; }
+    }
+
+    window.customElements.define(ArtStory.is, ArtStory);
+  </script>
+</dom-module>

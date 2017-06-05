@@ -24,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="lazy-import" href="art-home.html">
 <link rel="lazy-import" href="art-about.html">
-<link rel="lazy-import" href="my-view3.html">
+<link rel="lazy-import" href="art-story.html">
 <link rel="lazy-import" href="my-view404.html">
 
 <dom-module id="art-app">
@@ -82,6 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="home">Home</a>
           <a name="about" href="about">About</a>
+          <a name="story" href="story">Project Story</a>
         </iron-selector>
         <div style="margin-left:1em">
           View more projects at <a href="http://brandonladuke.com">brandonladuke.com</a>.
@@ -105,6 +106,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             role="main">
           <art-home name="home"></art-home>
           <art-about name="about"></art-about>
+          <art-story name="story"></art-story>
           <art-view404 name="view404"></art-view404>
         </iron-pages>
       </app-header-layout>
