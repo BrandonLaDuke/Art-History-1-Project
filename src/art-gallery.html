@@ -1,0 +1,80 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="art-gallery">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      .header {
+        background-image: url(../images/gallery3.jpg);
+        background-size: cover;
+        background-position: 100% 5%;
+        height: 20em;
+      }
+      .gallery {
+        margin: 1em auto;
+        max-width: 800px;
+        padding: 10px;
+      }
+      .gallery h1 {
+        text-align: center;
+        font-weight: 900;
+        font-size: 2em;
+      }
+      .gallery h3 {
+        font-weight: 100;
+        text-align: center;
+      }
+      .attr {
+        text-align: right;
+      }
+      .img-grid {
+        display: flex;
+        width:100%;
+        padding: 0 auto;
+        flex-flow: wrap;
+      }
+      .img-grid img {
+        flex: 1;
+        min-width: 200px; height: 200px;
+      }
+    </style>
+
+    <div class="header">
+
+    </div>
+    <div class="gallery">
+      <h1>Gallery</h1>
+      <div class="img-grid">
+        <img src="/images/story_head.JPG" alt="Sir Thomas More" title="Sir Thomas More">
+        <img src="/images/about_head.JPG" alt="Noli Me Tangere" title="Noli Me Tangere">
+        <img src="/images/gallery1.jpg" alt="The Merchant Georg Gisze" title="The Merchant Georg Gisze">
+        <img src="/images/gallery2.jpg" alt="Edward VI as a Child" title="Edward VI as a Child">
+        <img src="/images/gallery3.jpg" alt="Jane Seymour, Queen of England" title="Jane Seymour, Queen of England">
+        <img src="/images/gallery4.jpg" alt="An Allegory of Passion" title="An Allegory of Passion">
+        <img src="/images/gallery5.jpg" alt="Derich Born (1510?-49)" title="Derich Born (1510?-49)">
+        <img src="/images/gallery6.jpg" alt="Sir Thomas More (1478 -1535)" title="Sir Thomas More (1478 -1535)">
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class ArtGallery extends Polymer.Element {
+      static get is() { return 'art-gallery'; }
+    }
+
+    window.customElements.define(ArtGallery.is, ArtGallery);
+  </script>
+</dom-module>
